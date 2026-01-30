@@ -17,6 +17,8 @@ Este es un sistema de gestión de ventas desarrollado en **Python** que utiliza 
   - `csv`: Para la manipulación de datos estructurados.
   - `os`: Para la gestión de rutas y directorios de forma independiente al Sistema Operativo.
 
+## Arte ASCII sacado de: https://ascii.co.uk/art/walrus
+
 ## Cómo usar el script
 
 1. Clonar el repositorio.
