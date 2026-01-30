@@ -1,6 +1,6 @@
 import os
 import csv
-#POR HACER: Hacer que sea posible eliminar ventas registradas
+
 sales=[]
 break_midname = False
 #Directorio madre donde esta el archivo .py (creo que es necesario para que funcione en otros computadores)
@@ -160,6 +160,7 @@ def edit_sale():
                     writer = csv.DictWriter(new_csv_data, fieldnames=global_field_names)
                     writer.writeheader()
                     writer.writerows(id_read_list)
+                print("Venta editada exitosamente.")
             else:
                 print("ID de venta no encontrada")
         
@@ -209,7 +210,7 @@ print("5- Eliminar una venta registrada")
 print("6- Salir")
 
 while True:
-    choice = input("Elija lo que quiere hacer (1-5): ")
+    choice = input("\nElija lo que quiere hacer (1-6): ")
     if choice in ("1", "2", "3", "4", "5", "6", "7"):
         if choice == "1":
             res = new_sale()
