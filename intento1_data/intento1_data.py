@@ -111,7 +111,7 @@ def vid_walrus():
     current_folder = os.path.dirname(os.path.abspath(__file__))
     video_src = os.path.join(current_folder, "walrust.mp4")
     if os.path.exists(video_src):
-        print("ÜH ÜH ÜH")
+        print("\n       ÜH ÜH ÜH")
         os.startfile(video_src)
     else:
         print("Error.")
