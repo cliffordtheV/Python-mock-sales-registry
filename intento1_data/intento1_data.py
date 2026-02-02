@@ -1,10 +1,14 @@
 import os
 import csv
+import sys
 
 sales=[]
 break_midname = False
 #Directorio madre donde esta el archivo .py (creo que es necesario para que funcione en otros computadores)
-base_dir = os.path.dirname(__file__)
+if getattr(sys, "frozen", False):
+    base_dir = os.path.dirname(sys.executable)
+else:
+    base_dir = os.path.dirname(os.path.abspath(__file__))
 
 #Esto es para definir el nombre y ruta del archivo de los datos
 csv_filename = "archivo_ventas.csv"
@@ -108,13 +112,13 @@ def mst_expensive_function():
 
 #Aqui la funcion para el video
 def vid_walrus():
-    current_folder = os.path.dirname(os.path.abspath(__file__))
-    video_src = os.path.join(current_folder, "walrust.mp4")
+    video_src = os.path.join(base_dir, "walrust.mp4")
     if os.path.exists(video_src):
         print("\n       ÜH ÜH ÜH")
         os.startfile(video_src)
     else:
-        print("Error.")
+        print(f"Buscando en {video_src}")
+        print("         Video no encontrado.")
 
 #Aqui la funcion para guardar las columnas de ventas
 def save_data(recent_dict):
@@ -160,7 +164,7 @@ def edit_sale():
                     writer = csv.DictWriter(new_csv_data, fieldnames=global_field_names)
                     writer.writeheader()
                     writer.writerows(id_read_list)
-                print("Venta editada exitosamente.")
+                    print("Venta editada exitosamente.")
             else:
                 print("ID de venta no encontrada")
         
