@@ -16,13 +16,14 @@ Este es un sistema de gestión de ventas desarrollado en **Python** que utiliza 
 - **Módulos Nativos:** 
   - `csv`: Para la manipulación de datos estructurados.
   - `os`: Para la gestión de rutas y directorios de forma independiente al Sistema Operativo.
+  - `sys`: Para el correcto funcionamiento de las rutas.
 
 ## Arte ASCII sacado de: https://ascii.co.uk/art/walrus
 
-## Cómo usar el script
+## Cómo usar el script sin el ejecutable (podria causar errores)
 
 1. Clonar el repositorio.
-2. Asegúrate de tener Python 3.0 instalado.
-3. Ejecuta el script principal:
+2. Asegúrarse de tener Python 3.0 instalado.
+3. Ejecutar el script principal:
    ```bash
    python intento1_data.py
